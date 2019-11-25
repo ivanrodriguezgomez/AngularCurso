@@ -1,0 +1,5 @@
+<li *ngFor="let project of projects">
+    <a routerLink="{{project.id}}" class="button"> View </a>
+  <span>{{ project.name }}</span>
+  </li>
+<router-outlet></router-outlet>
