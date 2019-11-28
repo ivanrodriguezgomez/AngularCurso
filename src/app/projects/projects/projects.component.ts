@@ -11,6 +11,11 @@ export class ProjectsComponent implements OnInit {
 
 public projects: Project[];
 public project: Project;
+  isShow = false;
+
+  toggleDisplay() {
+    this.isShow = !this.isShow;
+  }
 
   constructor() { }
 
