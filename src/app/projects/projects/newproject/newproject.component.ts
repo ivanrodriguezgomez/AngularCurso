@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Project } from 'src/app/projects/projects/models/project';
+import { environment } from 'src/environments/environment';
+
 
 @Component({
   selector: 'app-newproject',
@@ -8,9 +11,23 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class NewprojectComponent implements OnInit {
 
+  public project: Project;
+  public projects: Project[];
+
   constructor() { }
 
   ngOnInit() {
+    this.initProj();
   }
-
+  public saveProject() {
+    environment.projects.push({ ...this.project });
+    this.initProj();
+    }
+  public initProj() {
+    this.project = {
+      id: 0,
+      name: ''
+    };
+    this.projects = [];
+  }
 }

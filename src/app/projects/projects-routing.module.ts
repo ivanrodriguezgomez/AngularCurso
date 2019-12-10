@@ -7,18 +7,18 @@ import { NewprojectComponent } from './projects/newproject/newproject.component'
 
 const routes: Routes = [
 {
+  path: 'newproject',
+  component: NewprojectComponent
+},
+{
   path: '',
   component: ProjectsComponent,
   children: [
     {
-      path: ':id',
+      path: 'project/:id',
       component: ViewerprojectComponent
-    },
-    {
-      path: '/newproject',
-      component: NewprojectComponent
     }
-  ]
+  ],
 }
 ];
 

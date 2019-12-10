@@ -1,11 +1,13 @@
+<a class="button" [routerLink]="['newproject']">New project</a>
+
 <div [hidden]="isShow">
 <li  *ngFor="let project of projects">
-    <a routerLink="{{project.id}}" class="button" (click)="toggleDisplay()"> View </a>
+    <a routerLink="/viewer/project/{{project.id}}" class="button" (click)="toggleDisplay()"> View </a>
   <span>{{ project.name }}</span>
   </li>
 </div>
 <div></div>
 <router-outlet></router-outlet>
 <div [hidden]="!isShow">
-<a class="button" routerLink="/projects" (click)="toggleDisplay()">Up</a>
+<a class="button" routerLink="/viewer" (click)="toggleDisplay()">Up</a>
 </div>

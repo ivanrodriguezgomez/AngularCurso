@@ -9,7 +9,7 @@ const routes: Routes = [
     loadChildren: './home/home.module#HomeModule'
     },
     {
-    path: 'projects',
+    path: 'viewer',
     loadChildren: './projects/projects.module#ProjectsModule'
     },
     {
