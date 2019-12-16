@@ -10,16 +10,17 @@ import { FilterProjectsFormComponent } from './projects/filter-projects-form/fil
 import { ProjectsListComponent } from './projects/projects-list/projects-list.component';
 import { ViewerProjectFormComponentComponent } from './projects/viewer-project-form-component/viewer-project-form-component.component';
 import { NewProjectFormComponentComponent } from './projects/new-project-form-component/new-project-form-component.component';
-import { DashboardComponent } from './projects/dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [ProjectsComponent, ViewerprojectComponent, NewprojectComponent,
     FilterProjectsFormComponent, ProjectsListComponent,
-    ViewerProjectFormComponentComponent, NewProjectFormComponentComponent, DashboardComponent],
+    ViewerProjectFormComponentComponent, NewProjectFormComponentComponent],
   imports: [
     CommonModule,
     ProjectsRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ]
 })
 export class ProjectsModule {

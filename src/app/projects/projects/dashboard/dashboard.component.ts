@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Project } from '../models/project';
+import { ProjectsService } from 'src/app/projects.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,8 +10,11 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
 
   constructor() { }
+@Input() contador: number;
+public numProjects: number;
 
   ngOnInit() {
+    this.numProjects = this.contador;
   }
 
 }

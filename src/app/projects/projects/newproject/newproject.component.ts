@@ -14,22 +14,16 @@ export class NewprojectComponent implements OnInit {
 
   public project: Project;
   public projects: Project[];
+  public variable: string;
 
   constructor(private projectsService: ProjectsService) { }
 
   ngOnInit() {
-    this.initProj();
+    this. project = this.projectsService.initProject();
   }
-  public saveProject() {
-    this.projectsService.saveProject(this.project);
-    this.initProj();
+  public onSave() {
+    // this.projectsService.createProject(this.project);
+    this.projectsService.postProject(this.project);
+    this.project = this.projectsService.initProject();
     }
-
-  public initProj() {
-    this.project = {
-      id: 0,
-      name: ''
-    };
-    this.projects = [];
-  }
 }

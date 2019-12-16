@@ -1,1 +1,16 @@
-<p>new-project-form-component works!</p>
+<a class="button" routerLink="/viewer">Back</a>
+<form>
+  <fieldset>
+    <legend>New Project</legend>
+    <section>
+      <label for="id">ID</label>
+      <input name="id" type="text" style="width:50px;" [(ngModel)]="project.id"/>
+     </section>
+     <section>
+      <label for="name">Name</label>
+      <input name="name" type="text" [(ngModel)]="project.name" placeholder="Project Name"/>
+      </section>
+  </fieldset>
+  <input value="Save" type="submit" (click)="save.emit()" />
+ </form>
+ <pre>{{ project | json }}</pre>

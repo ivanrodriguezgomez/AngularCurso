@@ -1,0 +1,15 @@
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  padding: 5px 10px;
+  background-color: #EEEEEE;
+  border: 1px solid #DDDDDD;
+}
+
+
+.button.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}

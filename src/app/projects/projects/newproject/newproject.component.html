@@ -1,20 +1,3 @@
-<h3>Add new project</h3>
-
-
- <a class="button" routerLink="/viewer">Back</a>
-<form>
-  <fieldset>
-    <legend>New Project</legend>
-    <section>
-      <label for="id">ID</label>
-      <input name="id" type="text" style="width:50px;" [(ngModel)]="project.id"/>
-     </section>
-     <section>
-      <label for="name">Name</label>
-      <input name="name" type="text" [(ngModel)]="project.name" placeholder="Project Name"/>
-      </section>
-  </fieldset>
-  <input value="Save" type="submit" (click)="saveProject()" />
- </form>
- <pre>{{ project | json }}</pre>
-
+ <app-new-project-form-component (save)="onSave()"
+ [project]="project">
+</app-new-project-form-component>
