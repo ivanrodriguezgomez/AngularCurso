@@ -1,7 +1,7 @@
 <a [ngClass]="!isShow ? 'button' : 'button disabled'" [routerLink]="['newproject']">New project</a>
 <select class="custom-select" (change)="changeProject($event.target.value)" [value]='0'>
   <option value="-1" disabled>Choose your project</option>
-  <option *ngFor="let project of projects" [value]="project.id">{{project.name}}</option>
+  <option *ngFor="let project of projects$ | async" [value]="project.id">{{project.name}}</option>
 </select>
 <a [ngClass]="!isShow ? 'button' : 'button disabled'" routerLink="/viewer/project/{{ filterProj }}" (click)="toggleDisplay()">View</a>
 
@@ -10,7 +10,7 @@
 
   <!-- <app-dashboard [projects]="projects">
   </app-dashboard> -->
-  <li  *ngFor="let project of projects">
+  <li  *ngFor="let project of projects$ | async">
     <span>{{ project.name }}</span>
     </li>
 

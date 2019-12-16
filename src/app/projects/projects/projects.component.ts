@@ -3,6 +3,7 @@ import { Project } from './models/project';
 import { environment } from 'src/environments/environment';
 import { ProjectsService } from 'src/app/projects.service';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-projects',
@@ -11,7 +12,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
 })
 export class ProjectsComponent implements OnInit {
 
-public projects: Project[];
+// public projects: Project[];
+public projects$: Observable<Project[]>;
 public project: Project;
 public filterProj: number;
   isShow = false;
@@ -29,7 +31,7 @@ public filterProj: number;
 
 
   ngOnInit() {
-    this.projects = this.projectsService.getProjects();
+    this.projects$ = this.projectsService.getProjects();
   }
 
 }
