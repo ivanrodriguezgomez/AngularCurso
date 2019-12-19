@@ -33,21 +33,9 @@ public initProject() {
   return this.project;
 }
 
-// public createProject(project: Project) {
-//   environment.projects.push({ ...project });
-//   }
-
-// public readProjects() {
-//   return environment.projects;
-// }
-
 public countProjects() {
   this.counterProjects$ = this.httpClient.get(this.urlCountApi).pipe(share());
-  this.counterProjects$.subscribe(result => {this.count = result.count; });
-
-  // this.httpClient
-  //   .get<responseCounter>(this.urlCountApi).subscribe(result => {this.counterProjects = result.count; });
-  return this.count;
+  return this.counterProjects$ ;
 }
 
 public postProject(project: Project) {

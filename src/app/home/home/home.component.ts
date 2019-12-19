@@ -11,12 +11,12 @@ import { Observable } from 'rxjs';
 export class HomeComponent implements OnInit {
 
   constructor(private projectsService: ProjectsService) { }
-  public numProjects:number;
+  public numProjects$: Observable<any>;
 
 
 
   ngOnInit() {
-    this.numProjects = this.projectsService.countProjects();
+    this.numProjects$ = this.projectsService.countProjects();
   }
 
 }

@@ -1,16 +1,13 @@
 <a class="button" routerLink="/viewer">Back</a>
-<form>
-  <fieldset>
-    <legend>New Project</legend>
-    <section>
-      <label for="id">ID</label>
-      <input name="id" type="text" style="width:50px;" [(ngModel)]="project.id"/>
-     </section>
-     <section>
-      <label for="name">Name</label>
-      <input name="name" type="text" [(ngModel)]="project.name" placeholder="Project Name"/>
-      </section>
-  </fieldset>
-  <input value="Save" type="submit" (click)="save.emit()" />
- </form>
- <pre>{{ project | json }}</pre>
+ <form [formGroup]="formProject">
+  <label for="ID">ID</label>
+  <input name="ID"
+  formControlName="ID"
+  type="text" [(ngModel)]="project.id"/><br>
+  <label for="name">Name</label>
+  <input name="name"
+  formControlName="name"
+  type="text" [(ngModel)]="project.name"/><br>
+  <button (click)="save.emit()"
+ [disabled]="formProject.invalid">Save</button>
+  </form>

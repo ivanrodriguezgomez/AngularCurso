@@ -11,8 +11,8 @@ import { Observable } from 'rxjs';
 export class DashboardComponent implements OnInit {
 
   constructor() { }
-@Input() contador: number;
-public numProjects: number;
+@Input() contador: Observable<any>;
+public numProjects: Observable<any>;
 
   ngOnInit() {
     this.numProjects = this.contador;

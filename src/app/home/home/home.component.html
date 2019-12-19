@@ -1,2 +1,2 @@
- <app-dashboard [contador]="numProjects">
+ <app-dashboard [contador]="(numProjects$ | async).count">
 </app-dashboard>
