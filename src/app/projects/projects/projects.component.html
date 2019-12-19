@@ -10,9 +10,24 @@
 
   <!-- <app-dashboard [projects]="projects">
   </app-dashboard> -->
-  <li  *ngFor="let project of projects$ | async">
+  <!-- <li  *ngFor="let project of projects$ | async">
     <span>{{ project.name }}</span>
-    </li>
+    </li> -->
+
+    <table class="pure-table pure-table-horizontal">
+      <thead>
+      <tr>
+        <th style="width: 150px">ID</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let project of projects$ | async">
+          <td style="width: 150px">{{ project.id }}</td >
+          <td>{{project.name}}</td>
+      </tr>
+    </tbody>
+    </table>
 
 </div>
 <div></div>

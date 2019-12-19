@@ -22,13 +22,14 @@ export class ProjectsService {
   public count: number;
   private urlApi = 'https://api-base.herokuapp.com/api/pub/projects';
   private urlCountApi = 'https://api-base.herokuapp.com/api/pub/projects/count';
-  // public projects$: Observable<Project> = null;
-  public projects$: Observable<any>;
+    public projects$: Observable<any>;
 
 public initProject() {
   this.project = {
-    id: 0,
-    name: ''
+    id: null,
+    name: '',
+    description: '',
+    done: false
   };
   return this.project;
 }

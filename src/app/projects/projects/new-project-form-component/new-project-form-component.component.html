@@ -1,13 +1,47 @@
 <a class="button" routerLink="/viewer">Back</a>
- <form [formGroup]="formProject">
+<div>
+ <form style="width:fit-content" [formGroup]="formProject">
+   <table width="550">
+     <tr>
+       <td >
   <label for="ID">ID</label>
-  <input name="ID"
+</td>
+<td >
+  <input name="ID" style="width:50px;"
   formControlName="ID"
-  type="text" [(ngModel)]="project.id"/><br>
+  type="text" [(ngModel)]="project.id"/>
+</td></tr>
+  <tr>
+<td >
   <label for="name">Name</label>
+</td>
+<td >
   <input name="name"
   formControlName="name"
-  type="text" [(ngModel)]="project.name"/><br>
+  type="text" [(ngModel)]="project.name"/>
+</td>
+</tr>
+<tr>
+<td >
+<label for="name">Description</label>
+</td>
+<td >
+  <textarea class="form-control" name="description" id="description" formControlName="description" rows="6"
+  [(ngModel)]="project.description"></textarea>
+</td>
+</tr>
+<tr>
+<td >
+<label for="name">Done</label>
+</td>
+<td >
+<input name="done"
+formControlName="done"
+type="checkbox" [(ngModel)]="project.done"/>
+</td>
+</tr>
+</table>
   <button (click)="save.emit()"
  [disabled]="formProject.invalid">Save</button>
   </form>
+</div>

@@ -21,7 +21,9 @@ public formProject: FormGroup;
   private buildForm() {
     this.formProject = this.formBuilder.group({
     ID: ['', [Validators.required]],
-    name: ['', [Validators.required]]
+    name: ['', [Validators.required]],
+    description: ['', [Validators.required]],
+    done: [false, [Validators.required]]
     });
 }
 }

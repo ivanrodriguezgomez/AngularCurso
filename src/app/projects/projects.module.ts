@@ -11,7 +11,6 @@ import { ProjectsListComponent } from './projects/projects-list/projects-list.co
 import { ViewerProjectFormComponentComponent } from './projects/viewer-project-form-component/viewer-project-form-component.component';
 import { NewProjectFormComponentComponent } from './projects/new-project-form-component/new-project-form-component.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { LoggingInterceptorService } from './projects/logging-interceptor.service';
 
 @NgModule({
   declarations: [ProjectsComponent, ViewerprojectComponent, NewprojectComponent,
@@ -23,14 +22,7 @@ import { LoggingInterceptorService } from './projects/logging-interceptor.servic
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule
-  ],
-  providers: [
-    {
-    provide: HTTP_INTERCEPTORS,
-    useClass: LoggingInterceptorService,
-    multi: true
-    }
-    ]
+  ]
 })
 export class ProjectsModule {
 
