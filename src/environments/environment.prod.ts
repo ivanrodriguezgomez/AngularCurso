@@ -1,4 +1,4 @@
 export const environment = {
-  appName: 'Aplicación Producción',
+  appName: 'PROJECT MANAGER',
   production: true
 };
