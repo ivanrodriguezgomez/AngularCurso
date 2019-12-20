@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Project } from '../models/project';
+import { ProjectsService } from 'src/app/projects.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-viewerproject',
@@ -9,12 +12,13 @@ import { ActivatedRoute } from '@angular/router';
 export class ViewerprojectComponent implements OnInit {
 public projectId: number;
 public projectName: string;
-  constructor(activateRoute: ActivatedRoute) {
+public projects: Project[];
+public project: Project;
+  constructor(activateRoute: ActivatedRoute, private projectService: ProjectsService) {
     this.projectId = activateRoute.snapshot.params['id'];
    }
 
   ngOnInit() {
-
   }
 
 }

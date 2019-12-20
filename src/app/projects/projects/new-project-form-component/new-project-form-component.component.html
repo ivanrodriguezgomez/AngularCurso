@@ -1,7 +1,39 @@
+
+<!-- <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head> -->
+
 <a class="button" routerLink="/viewer">Back</a>
+
+
+
 <div>
  <form style="width:fit-content" [formGroup]="formProject">
-   <table width="550">
+  <label for="ID">ID</label><br>
+  <input name="ID" style="width:50px;"
+  formControlName="ID"
+  type="text" [(ngModel)]="project.id"/><br>
+  <label for="name">Name</label><br>
+  <input name="name"  style="width:450px;"
+  formControlName="name"
+  type="text" [(ngModel)]="project.name"/><br>
+<label for="name">Description</label><br>
+  <textarea class="form-control" name="description"  style="width:450px;" id="description" formControlName="description" rows="5"
+  [(ngModel)]="project.description"></textarea><br>
+<label for="name">Done</label><br>
+<input name="done"
+formControlName="done"
+type="checkbox" [(ngModel)]="project.done"/><br>
+  <button (click)="save.emit()"
+ [disabled]="formProject.invalid">Save</button>
+  </form>
+</div>
+<!-- <a class="button" routerLink="/viewer">Back</a>
+<div>
+ <form style="width:fit-content" [formGroup]="formProject">
+   <table width="700">
      <tr>
        <td >
   <label for="ID">ID</label>
@@ -26,7 +58,7 @@
 <label for="name">Description</label>
 </td>
 <td >
-  <textarea class="form-control" name="description" id="description" formControlName="description" rows="6"
+  <textarea class="form-control" name="description" id="description" formControlName="description" rows="5"
   [(ngModel)]="project.description"></textarea>
 </td>
 </tr>
@@ -44,4 +76,4 @@ type="checkbox" [(ngModel)]="project.done"/>
   <button (click)="save.emit()"
  [disabled]="formProject.invalid">Save</button>
   </form>
-</div>
+</div> -->

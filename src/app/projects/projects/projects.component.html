@@ -8,13 +8,7 @@
 
 <div [hidden]="isShow">
 
-  <!-- <app-dashboard [projects]="projects">
-  </app-dashboard> -->
-  <!-- <li  *ngFor="let project of projects$ | async">
-    <span>{{ project.name }}</span>
-    </li> -->
-
-    <table class="pure-table pure-table-horizontal">
+    <table class="pure-table pure-table-horizontal" >
       <thead>
       <tr>
         <th style="width: 150px">ID</th>
@@ -36,3 +30,4 @@
 <div [hidden]="!isShow">
 <a class="button" routerLink="/viewer" (click)="toggleDisplay()">Up</a>
 </div>
+

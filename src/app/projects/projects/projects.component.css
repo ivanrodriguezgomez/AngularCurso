@@ -159,3 +159,7 @@ striping:
 th.thID {
   width: 15%
 }
+
+.invisible {
+  visibility: hidden;
+}
