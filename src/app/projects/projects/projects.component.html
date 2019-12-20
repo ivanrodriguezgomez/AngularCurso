@@ -5,19 +5,16 @@
 </select>
 <a [ngClass]="!isShow ? 'button' : 'button disabled'" routerLink="/viewer/project/{{ filterProj }}" (click)="toggleDisplay()">View</a>
 
-
 <div [hidden]="isShow">
 
     <table class="pure-table pure-table-horizontal" >
       <thead>
       <tr>
-        <th style="width: 150px">ID</th>
         <th>Name</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let project of projects$ | async">
-          <td style="width: 150px">{{ project.id }}</td >
           <td>{{project.name}}</td>
       </tr>
     </tbody>
@@ -25,7 +22,6 @@
 
 </div>
 <div></div>
-
 <router-outlet></router-outlet>
 <div [hidden]="!isShow">
 <a class="button" routerLink="/viewer" (click)="toggleDisplay()">Up</a>

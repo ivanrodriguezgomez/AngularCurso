@@ -16,6 +16,7 @@ export class ProjectsComponent implements OnInit {
 public projects$: Observable<Project[]>;
 public project: Project;
 public filterProj: number;
+public numProjects$: Observable<any>;
   isShow = false;
 
   toggleDisplay() {

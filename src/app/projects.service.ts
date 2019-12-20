@@ -49,6 +49,4 @@ public postProject(project: Project) {
     this.projects$ = this.httpClient.get(this.urlApi).pipe(share());
     return this.projects$;
     }
-
-
 }

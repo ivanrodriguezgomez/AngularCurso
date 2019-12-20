@@ -1,0 +1,19 @@
+<br><br>
+<table>
+  <thead>
+  <tr>
+    <th style="width: 15%">ID</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Finished</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let project of projects$ | async">
+      <td style="width: 15%">{{ project.id }}</td >
+        <td>{{project.name}}</td>
+        <td>{{project.description}}</td>
+        <td>{{ (project.done) ? 'YES' : 'NO' }}</td>
+  </tr>
+</tbody>
+</table>

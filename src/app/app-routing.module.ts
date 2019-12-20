@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NotFoundComponent } from './core/not-found/not-found.component';
+import { ProjectsSearchComponent } from './projects/projects/projects-search/projects-search.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,10 @@ const routes: Routes = [
     {
     path: 'viewer',
     loadChildren: './projects/projects.module#ProjectsModule'
+    },
+    {
+    path: 'search',
+    component: ProjectsSearchComponent
     },
     {
     path: 'not-found',

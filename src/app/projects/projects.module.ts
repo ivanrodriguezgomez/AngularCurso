@@ -11,11 +11,12 @@ import { ProjectsListComponent } from './projects/projects-list/projects-list.co
 import { ViewerProjectFormComponentComponent } from './projects/viewer-project-form-component/viewer-project-form-component.component';
 import { NewProjectFormComponentComponent } from './projects/new-project-form-component/new-project-form-component.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ProjectsSearchComponent } from './projects/projects-search/projects-search.component';
 
 @NgModule({
   declarations: [ProjectsComponent, ViewerprojectComponent, NewprojectComponent,
     FilterProjectsFormComponent, ProjectsListComponent,
-    ViewerProjectFormComponentComponent, NewProjectFormComponentComponent],
+    ViewerProjectFormComponentComponent, NewProjectFormComponentComponent, ProjectsSearchComponent],
   imports: [
     CommonModule,
     ProjectsRoutingModule,
